@@ -2,13 +2,13 @@ package E1;
 public class Cesar {
     public static void main(String[] args) {
         
-        String mensaje = "Hola amorcito";
+        String mensaje = "Hola Mundo";
         
         char array [] = mensaje.toCharArray();
         
         for(int i=0;i<array.length; i++ )
         {
-            array[i]= (char)(array[i]+(char)1);
+            array[i]= (char)(array[i]+(char)3);
         }
         
         
@@ -17,5 +17,5 @@ public class Cesar {
         
         System.out.println(cifrado);
     }
-   
+    
 }
