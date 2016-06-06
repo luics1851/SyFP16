@@ -6,6 +6,7 @@
 package E4;
 
 import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 /**
@@ -21,9 +22,31 @@ public class Traductor extends javax.swing.JFrame {
         initComponents();
         
         ta.addKeyListener(new KeyAdapter() {
-         
             
-         
+            String str="";
+
+            @Override
+            public void keyTyped(KeyEvent e) {
+                
+                if(e.getKeyChar()!=' '&&e.getKeyChar()!=10)
+                {
+                   str = str + e.getKeyChar();
+                }
+                
+                if(e.getKeyChar()==8)
+                {
+                    str.substring(0,str.length()-1);
+                }
+                
+                if(e.getKeyChar()!=)
+                {
+                    
+                }
+                
+              
+                
+                
+            }
         });
     }
 
