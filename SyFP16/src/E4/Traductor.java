@@ -38,9 +38,9 @@ public class Traductor extends javax.swing.JFrame {
                     str.substring(0,str.length()-1);
                 }
                 
-                if(e.getKeyChar()!=)
+                if(e.getKeyChar()==8&&e.getKeyChar()!=10&&e.getKeyChar()!=' ')
                 {
-                    
+                    str = str + e.getKeyChar();
                 }
                 
               
