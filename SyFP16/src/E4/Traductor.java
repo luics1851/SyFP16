@@ -1,48 +1,52 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package E4;
-
+import E5.Traduccion;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-/**
- *
- * @author LuisCalderon
- */
+
 public class Traductor extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Traductor
-     */
+   
+    Traduccion x;
+    
     public Traductor() {
         initComponents();
+        
+        x= new Traduccion();
+        x.agregar("hola", "hello");
+        x.agregar("cual","what");
+        x.agregar("es", "is");
+        x.agregar("tu","your");
+        x.agregar("nombre","name");
         
         ta.addKeyListener(new KeyAdapter() {
             
             String str="";
+            String t="";
 
             @Override
             public void keyTyped(KeyEvent e) {
                 
-                if(e.getKeyChar()!=' '&&e.getKeyChar()!=10)
+                char key=e.getKeyChar();
+                if(key!=' '&&key!=10&&key!=8)
                 {
-                   str = str + e.getKeyChar();
+                   str = str + key;
                 }
                 
-                if(e.getKeyChar()==8)
+               else if(key==8)
                 {
-                    str.substring(0,str.length()-1);
+                    str.substring(0,str.length()-1); 
                 }
                 
-                if(e.getKeyChar()==8&&e.getKeyChar()!=10&&e.getKeyChar()!=' ')
+               if(key==10 || key==' ')
                 {
-                    str = str + e.getKeyChar();
+                   t=x.traducir(str);
+                   t=t+" "+x.traducir(str);
+                   str="";
                 }
-                
+               
+                 ta2.setText(t);
               
                 
                 
