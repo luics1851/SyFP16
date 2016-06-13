@@ -11,15 +11,40 @@ public class Conv extends javax.swing.JFrame {
     public Conv() {
         initComponents();
         
+        cb.removeAllItems();
+        cb.addItem("centimetros");
+        cb.addItem("metros");
+        cb.addItem("kilometros");
+        cb.addItem("pulgadas");
+        cb.addItem("pies");
+        cb.addItem("yardas");
+        cb.addItem("millas");
+        
+        cb2.removeAllItems();
+        cb2.addItem("centimetros");
+        cb2.addItem("metros");
+        cb2.addItem("kilometros");
+        cb2.addItem("pulgadas");
+        cb2.addItem("pies");
+        cb2.addItem("yardas");
+        cb2.addItem("millas");
+        
         boton.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
                String a=(String)cb.getSelectedItem();
-               double b= Integer.parseInt(tf.getText()); 
+               Double b= new Double(tf.getText());
+               double v= b.doubleValue();
                String c=(String)cb2.getSelectedItem();
                
-               
+               Convertidor in = new Convertidor();
+               double q= in.convertir(a, v, c);
+             
+              
+               Double r=new Double(q);
+              tf2.setText(r.toString());
+            
             }
         });
         

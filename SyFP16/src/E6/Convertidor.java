@@ -36,7 +36,7 @@ public class Convertidor
     {
         Convertidor convertir = new Convertidor();
         double res;
-        res = convertir ("centimetros",30.0,"pies");
+        res = convertir.convertir("centimetros",30.0,"pies");
         System.out.println(res);
     }
 }
