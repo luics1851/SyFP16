@@ -1,20 +1,19 @@
 
 package ER1;
 
-public class Aclase {
+public abstract class Aclase implements Iclase {
     
-    
-    
-    String descripcion;
-    
-     public void print()
-    {
-        System.out.println(descripcion);
-    }
+    protected String descripcion;
 
     public Aclase(String descripcion) {
         this.descripcion = descripcion;
     }
+    
+    
+    
+ public void print(){
+     System.out.println(descripcion);
+ }
      
      
     
