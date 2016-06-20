@@ -1,17 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package EMT;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
- *
- * @author LuisCalderon
- */
 public class Circula extends javax.swing.JFrame {
 
     /**
@@ -51,10 +42,12 @@ public class Circula extends javax.swing.JFrame {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                tf4.setText("Hoy no circulan"
-                        + "\nlos autos con "
-                        + "\nterminacion 1 o 2 "
-                        + "\nengomado verde");
+                tf4.setText("Hoy no circulan"                      
+                        + "\nlos autos con"
+                        + "\nengomado verde y"
+                        + "\nterminacion 1 o 2. ");
+                        
+                        
             }
             
         });
@@ -69,22 +62,22 @@ public class Circula extends javax.swing.JFrame {
                 
                 Ccircula x = new Ccircula();
                
-                if(b==""&&c=="")
+                if(b==""&&c==""&& a!="")
                 {
-                    String y = x.getByPlaca(a);
-                    tf4.setText(y);
+                    
+                    tf4.setText(x.getByPlaca(a));
                 }
                 
-                if(a==""&&b=="") 
+                if(a==""&&c==""&&b!="") 
                 {
-                    String z = x.getTerminacionPlaca(b);
-                    tf4.setText(z);
+                    
+                    tf4.setText(x.getTerminacionPlaca(b));
                 }
                 
-                if (a==""&&c=="")
+                if (a==""&&b==""&&c!="")
                 {
-                    String w = x.getColor(c);
-                    tf4.setText(w);
+                    
+                    tf4.setText(x.getColor(c));
                 }
                         
                 
@@ -161,12 +154,12 @@ public class Circula extends javax.swing.JFrame {
                     .addComponent(b1)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(29, 29, 29)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(tf4, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(b3))
-                            .addComponent(b2))))
+                        .addComponent(b2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 9, Short.MAX_VALUE)
+                        .addComponent(tf4, javax.swing.GroupLayout.PREFERRED_SIZE, 424, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(b3)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(

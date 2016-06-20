@@ -1,6 +1,4 @@
-
 package EMT;
-
 
 public class Ccircula implements Icircula {
 
@@ -11,27 +9,27 @@ public class Ccircula implements Icircula {
 
     @Override
     public String getByPlaca(String a) {
-        if(a=="5"||a=="6")
+        if(a=="5y6")
         {
             return "Lunes";
         }
-        if(a=="9"||a=="0")
+        if(a=="9y0")
         {
             return "Viernes";
         }
-        if(a=="7"||a=="8")
+        if(a=="7y8")
         {
             return "Martes";
         }
-        if(a=="3"||a=="4")
+        if(a=="3y4")
         {
             return "Miercoles";
         }
-        if(a=="1"||a=="2")
+        if(a=="1y2")
         {
             return "Jueves";
         }
-        return"";
+        return "";
     }
 
     @Override
