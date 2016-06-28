@@ -33,7 +33,7 @@ public class Cuenta{
             cuenta.deposito(500.00);
             System.out.println(saldo+cuenta.checkSaldo());
         }
-        catch(WrongAmountException | SaldoInsuficienteException e){
+        catch(WrongAmountException e){
             System.out.println(e.toString());
         }
     }
