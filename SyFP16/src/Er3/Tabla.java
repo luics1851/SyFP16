@@ -8,7 +8,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.AbstractTableModel;
 
-public class Tabla extends AbstractTableModel {
+public final class Tabla extends AbstractTableModel {
     
     String m[][];
     int i=0;
@@ -41,7 +41,7 @@ public class Tabla extends AbstractTableModel {
                 br= new BufferedReader(new FileReader(s));
                   String linea =br.readLine();
                 while(linea!=null){
-                    row=linea.split(",");
+                    row=linea.split(";");
                     if(linea.equals("FRAME")){
                         i=i+1;
                     }                   
@@ -64,7 +64,7 @@ public class Tabla extends AbstractTableModel {
                 br= new BufferedReader(new FileReader(s));
                   String linea =br.readLine();
                 while(linea!=null){
-                    row=linea.split(",");
+                    row=linea.split(";");
                     if(linea.equals("GLUE")){
                         i=i+1;
                     }                   
@@ -87,7 +87,7 @@ public class Tabla extends AbstractTableModel {
                 br= new BufferedReader(new FileReader(s));
                   String linea =br.readLine();
                 while(linea!=null){
-                    row=linea.split(",");
+                    row=linea.split(";");
                     if(linea.equals("PUZZLE")){
                         i=i+1;
                     }                   
@@ -110,7 +110,7 @@ public class Tabla extends AbstractTableModel {
                 br= new BufferedReader(new FileReader(s));
                   String linea =br.readLine();
                 while(linea!=null){
-                    row=linea.split(",");
+                    row=linea.split(";");
                     if(linea.equals("STORAGE")){
                         i=i+1;
                     }                   
